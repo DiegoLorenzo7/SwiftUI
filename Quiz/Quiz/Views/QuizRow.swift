@@ -33,7 +33,7 @@ struct QuizRow: View {
                             isFavorited.toggle()
                         }
                     
-                    Text(quizItem.author?.username ?? "Autor Anónimo")
+                    Text(quizItem.author?.username ?? quizItem.author?.profileName ?? "Autor")
                         .font(.callout)
                         .foregroundColor(.gray)
                     

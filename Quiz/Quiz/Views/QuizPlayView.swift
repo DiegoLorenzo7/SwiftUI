@@ -52,7 +52,7 @@ struct QuizPlayView: View {
         Text(quizItem.question)
             .fontWeight(.heavy)
             .font(.largeTitle)
-            .foregroundColor(.blue) // Cambiar color del texto
+            .foregroundColor(.init(red: 0.059, green: 0.859, blue: 0.718)) // Cambiar color del texto
     }
     
     private var attachment: some View {
@@ -72,7 +72,7 @@ struct QuizPlayView: View {
             Text("Score = \(scoresModel.acertadas.count)")
                 .foregroundColor(.green)
             
-            Text(quizItem.author?.username  ?? "Autor Anónimo")
+            Text(quizItem.author?.username ?? quizItem.author?.profileName ?? "Autor")
                 .font(.callout)
                 .foregroundColor(.gray) // Cambiar color del texto
             
@@ -102,7 +102,7 @@ struct QuizPlayView: View {
                 Text("Comprobar")
                     .foregroundColor(.white)
                     .padding()
-                    .background(Color.blue) // Cambiar color del fondo del botón
+                    .background(Color.init(red: 0.059, green: 0.859, blue: 0.718)) // Cambiar color del fondo del botón
                     .cornerRadius(10)
             }
             .padding(.top)
